@@ -10,11 +10,12 @@ var canHit = true;
 
 
 window.onload = function(){
-    buildDeck()
+    kortLek()
+    blandaKort()
 }
 
 function kortLek() {
-    const values = ["A","1","2","3","4","5","6", "7", "8","9","10","J","Q","K"]
+    const values = ["A","2","3","4","5","6", "7", "8","9","10","J","Q","K"]
     const färg = ["S","H","R","K"]
     deck = []
 
