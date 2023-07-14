@@ -14,17 +14,24 @@ window.onload = function(){
     blandaKort()
 }
 
-function kortLek() {
-    const values = ["A","2","3","4","5","6", "7", "8","9","10","J","Q","K"]
-    const färg = ["S","H","R","K"]
-    deck = []
-
+    function kortLek() {
+        const values = ["A","2","3","4","5","6", "7", "8","9","10","J","Q","K"]
+        const färg = ["S","H","R","K"]
+        deck = []
     for (let i = 0; i < färg.length; i++) {
-        for (let j = 0; j < values.length; j++) {
-            deck.push(values[j] + "-" + färg[i]); 
-        }
+      for (let j = 0; j < values.length; j++) {
+        const kort = {
+          suit: färg[i],
+          value: values[j]
+        };
+        deck.push(kort);
+      }
     }
-}
+  }
+  
+  function generateCardBox(card) {
+    return `<div class="card-box">${card.value}-${card.suit}</div>`;
+  }
 
 function blandaKort() {
     for(let i = 0; i < deck.length; i++) {
